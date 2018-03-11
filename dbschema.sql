@@ -5,5 +5,5 @@ CREATE TABLE tbl_users(
 	author varchar(255),
 	post varchar(1024),
 	ts timestamp,
-	constraint postID primary key (author,post,ts)
+	constraint postID primary key (author,ts)
 );
