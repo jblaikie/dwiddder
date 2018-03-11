@@ -1,8 +1,9 @@
-DROP DATABASE IF EXISTS db_users;
-CREATE DATABASE db_users;
-USE db_users;
+DROP DATABASE IF EXISTS tbl_posts;
+CREATE DATABASE tbl_posts;
+USE tbl_posts;
 CREATE TABLE tbl_users(
-	uname varchar(255) primary key,
-	pwd_hash varchar(1024),
-	real_name varchar(1024)
+	author varchar(255),
+	post varchar(1024),
+	ts timestamp,
+	constraint postID primary key (author,post,ts)
 );
