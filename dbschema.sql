@@ -1,7 +1,7 @@
-DROP DATABASE IF EXISTS tbl_posts;
-CREATE DATABASE tbl_posts;
-USE tbl_posts;
-CREATE TABLE tbl_users(
+DROP DATABASE IF EXISTS db_posts;
+CREATE DATABASE db_posts;
+USE db_posts;
+CREATE TABLE tbl_posts(
 	author varchar(255),
 	post varchar(1024),
 	ts timestamp,

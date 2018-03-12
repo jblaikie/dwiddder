@@ -29,20 +29,25 @@
 					alert("ERROR!");
 				}
 			    }*/);
-				window.location = "postlist.php";
+				
+				window.location = "/postlist.php";
+				//alert(post);
 		}
 	</script>
 </head>
 <body>
-
-<!--div class="container">
-	<input type="text" id="txtUname"> <br />
-	<input type="password" id="txtPwd"> <br />
-	<button id="btnSubmit" onclick="verifypwd()">Login</button>
+<?php error_log("fuck this shit"); ?>
+<div class="container">
+	Name:<br>
+	<input type="text" id="authorname"> <br />
+	<!--<input type="text" id="postbody"> <br />-->
+	Post:<br>
+	<textarea id = "postbody" rows = 3 cols = 40></textarea><br>
+	<button id="btnSubmit" onclick="makepost()">Submit</button>
 
 </div>
--->
 
+<!--
  <link rel="stylesheet" href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css">
 <div class="container">
 	<div class="row">
@@ -62,12 +67,12 @@
 										</ul>
 										<button type="submit" class="btn btn-success green" onclick="makepost()"><i class="fa fa-share"></i> Share</button>
 									</form>
-								</div><!-- Status Upload  -->
-							</div><!-- Widget Area -->
+								</div>
+							</div>
 						</div>
         
     </div>
-</div>
+</div> -->
 
 </body>
 </html> 
