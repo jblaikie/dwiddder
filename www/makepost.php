@@ -16,7 +16,7 @@
 		function makepost(){
 			var uname = $("#authorname").val();
 			var post = $("#postbody").val();
-		            alert("uname: " + $uname + "/npost: " + $post);    	
+		            	
 			    $.post("servlets/makePost.php",
 			    {
 				uname: uname,
