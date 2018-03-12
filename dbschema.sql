@@ -7,3 +7,4 @@ CREATE TABLE tbl_posts(
 	ts timestamp,
 	constraint postID primary key (author,ts)
 );
+INSERT INTO tbl_posts(author, post) VALUE ('evil', 'hi there');

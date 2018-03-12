@@ -22,9 +22,8 @@
 	function getPosts()
 	{
 	        $query = "SELECT * FROM tbl_posts";
-		$arr = executeSQL($query);
-		error_log("getPosts function in common.php!");		
-                return count($arr) > 0;
+		error_log("getPosts function in common.php!");
+                return executeSQL($query);
 /*
 		$.post("servlets/getPost.php",
 		{
