@@ -8,6 +8,7 @@
 		if (!$link) {
 		    throw new Exception("error: ".mysql_error());
 		}
+     
 		mysql_select_db("db_posts", $link);
 
 		//2. do it

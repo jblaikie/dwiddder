@@ -1,7 +1,9 @@
  <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Where in the World is Dr. Evil?</title>
+
+  <title>Create A Post</title>
+
   
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,7 +18,7 @@
 		function makepost(){
 			var uname = $("#authorname").val();
 			var post = $("#postbody").val();
-			
+		            	
 			    $.post("servlets/makePost.php",
 			    {
 				uname: uname,
@@ -65,7 +67,7 @@
 				<ul>
 	
 										</ul>
-										<button type="submit" class="btn btn-success green" onclick="makepost()"><i class="fa fa-share"></i> Share</button>
+										<button type="submit" class="btn btn-success green" onclick="makepost();"><i class="fa fa-share"></i> Share</button>
 									</form>
 								</div>
 							</div>
