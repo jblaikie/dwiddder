@@ -1,7 +1,9 @@
  <!DOCTYPE html>
 <html lang="en">
 <head>
+
   <title>Create A Post</title>
+
   
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -36,7 +38,7 @@
 	</script>
 </head>
 <body>
-<?php error_log("fuck this shit"); ?>
+<!--<?php error_log("fuck this shit"); ?>-->
 <div class="container">
 	Name:<br>
 	<input type="text" id="authorname"> <br />

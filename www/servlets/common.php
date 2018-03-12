@@ -1,13 +1,14 @@
 <?php
 	include_once("db.php");
 
+	
 	function insertPost($author, $post){
 		$author = secure($author);
 		$post = secure($post);
 
 		$q = "INSERT INTO tbl_posts(author, post) VALUES ('$author', '$post')";
 		executeSQL($q);
-		error_log("well were here now");
+	
 	}	
 
 	function verifyPwd($uname, $pwd){
@@ -24,16 +25,6 @@
 	        $query = "SELECT * FROM tbl_posts";
 		error_log("getPosts function in common.php!");
                 return executeSQL($query);
-/*
-		$.post("servlets/getPost.php",
-		{
-			op: "getPost"
-		},
-		function ($data){
-			$arrPosts = JSON.parse($data);
-			displayPosts($arrPosts);
-		}); 
-*/
 	}
 
 ?>
