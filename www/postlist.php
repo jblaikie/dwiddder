@@ -24,17 +24,15 @@
                 newPost.find('#author').html(author);
                 newPost.find('#ts').html(ts);
                 newPost.find('#message').html(message);
-		log("new post");
                 return newPost;
         }
         function displayPosts(arrPosts){
                 for(var i = 0; i < arrPosts.length; i++){
                         var post = arrPosts[i];
                         var author = post['author'];
-                        var message = post['message'];
+                        var message = post['post'];
                         var ts = post['ts'];
                         var newPost = genPost(author, message, ts);
-			log("display posts");
                         $('#container').append(newPost);
                 }
         }
@@ -46,7 +44,6 @@
                         var arrPosts = JSON.parse(data);
                         displayPosts(arrPosts);
                 });
-		log("retrieve posts");
         }
 	retrievePosts();
 </script>
