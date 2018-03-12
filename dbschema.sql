@@ -6,5 +6,4 @@ CREATE TABLE tbl_posts(
 	post varchar(1024),
 	ts timestamp,
 	constraint postID primary key (author,ts)
-);
-INSERT INTO tbl_posts(author, post) VALUE ('evil', 'hi there');
+)

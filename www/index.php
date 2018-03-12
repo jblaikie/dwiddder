@@ -11,14 +11,20 @@
                 function makepost(){
                         var uname = $("#authorname").val();
                         var post = $("#postbody").val();
+			//alert("uname: " + uname + ", post: " + post);
                                 
                             $.post("servlets/makePost.php",
                             {
                                 uname: uname,
                                 post: post 
-                            });
+                            },				
+			    	function(data, status){
+					//alert(data);
+					window.location =  "/postlist.php";
+			    	}
+			    );
 
-                   window.location =  "/postlist.php";             
+                                
                 }
                 
         </script>

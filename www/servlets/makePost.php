@@ -11,12 +11,6 @@
 	$uname = $_POST["uname"];
 	$post = $_POST["post"];
 	insertPost($uname,$post);
-	/*if(verifyPwd($uname, $pwd)){
-		echo "ok";
-		session_start();
-		$_SESSION["uname"] = $uname;
-	}else{
-		echo "nok for uname: $uname, pwd: $pwd";
-	}*/
+	
 	
 ?>
