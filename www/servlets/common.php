@@ -11,6 +11,7 @@
 
 		$q = "INSERT INTO tbl_posts(author, post) VALUES ('$author', '$post')";
 		executeSQL($q);
+		error_log("well were here now");
 	}	
 
 	function verifyPwd($uname, $pwd){
@@ -22,7 +23,7 @@
 		
 	}
 
-	function getPosts() //i'm actually not sure where this is supposed to live, file-wise? oops. also he referred to this as "retrievePosts" but fuck that
+	/*function getPosts() //i'm actually not sure where this is supposed to live, file-wise? oops. also he referred to this as "retrievePosts" but fuck that
 	{
 		$.post("servlets/dataops.php",
 		{
@@ -32,7 +33,7 @@
 			var arrPosts = JSON.parse(data);
 			displayPosts(arrPosts);
 		});
-	}
+	}*/
 
 if(1==2){
 	insertuser("m2", "abc123", "mini me");
