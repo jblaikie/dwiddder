@@ -1,9 +1,6 @@
 <?php
 	include_once("db.php");
 
-	//common utility
-	function checksum($txt){
-		return md5($txt);
 	}
 	function insertPost($author, $post){
 		$author = secure($author);
@@ -23,22 +20,21 @@
 		
 	}
 
-	/*function getPosts() //i'm actually not sure where this is supposed to live, file-wise? oops. also he referred to this as "retrievePosts" but fuck that
+	function getPosts()
 	{
-		$.post("servlets/dataops.php",
-		{
-			op: "getPosts"
-		},
-		function (data, status){
-			var arrPosts = JSON.parse(data);
-			displayPosts(arrPosts);
-		});
-	}*/
+	        $query = "SELECT * FROM tbl_posts;"
+		$arr = executeSQL($query);
+		error_log("getPosts function in common.php! " $arr);
+		return count($arr) > 0;
 
-if(1==2){
-	insertuser("m2", "abc123", "mini me");
-	$a1 = verifyPwd("m2", "abc123");
-	$a2 = verifyPwd("m2", "ccc123");
-	print("a1 is $a1, a2 is $a2\n");
+	/*	$.post("servlets/getPost.php",
+		{
+			op: "getPost"
+		},
+		function ($data){
+			$arrPosts = JSON.parse($data);
+			displayPosts($arrPosts);
+		}); */
+	}
 }
 ?>
