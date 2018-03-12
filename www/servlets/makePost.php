@@ -11,7 +11,6 @@
 	$uname = $_POST["uname"];
 	$post = $_POST["post"];
 	insertPost($uname,$post);
-	error_log("FUCK")
 	/*if(verifyPwd($uname, $pwd)){
 		echo "ok";
 		session_start();

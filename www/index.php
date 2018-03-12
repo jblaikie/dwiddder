@@ -1,78 +1,46 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Where in the World is Dr. Evil?</title>
-  
+  <title>Create Report</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<link rel ="stylesheet" href="localhost/makepost.css">
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<script>
-		function makepost(){
-			var uname = $("#authorname").val();
-			var post = $("#postbody").val();
-			
-			    $.post("servlets/makePost.php",
-			    {
-				uname: uname,
-				post: post 
-			    }
-			   /* function(data, status){
-				if(data=="ok"){
-					window.location = "inbox.php";
-				}else{
-					alert("ERROR!");
-				}
-			    }*/);
-				<?php error_log("on to postlist"); ?>
-				window.location = "/postlist.php";
-				//alert(post);
-		}
-	</script>
+        <script>
+                function makepost(){
+                        var uname = $("#authorname").val();
+                        var post = $("#postbody").val();
+                                
+                            $.post("servlets/makePost.php",
+                            {
+                                uname: uname,
+                                post: post 
+                            });
+
+                   window.location =  "/postlist.php";             
+                }
+                
+        </script>
 </head>
 <body>
-<!--<?php error_log("fuck this shit"); ?>-->
-<div class="container">
-	Name:<br>
-	<input type="text" id="authorname"> <br />
-	<!--<input type="text" id="postbody"> <br />-->
-	Post:<br>
-	<textarea id = "postbody" rows = 3 cols = 40></textarea><br>
-	<button id="btnSubmit" onclick="makepost()">Submit</button>
 
+<div class="container">
+<div class="form-group">
+<label for="authorname">Name:</label>
+  <input type="text" class="form-control" id="authorname">
+  <label for="postbody">Comment:</label>
+  <textarea class="form-control" rows="5" id="postbody"></textarea>
+<input type="submit" class="btn btn-success" value="Report" id="btnSubmit">
+</div>
 </div>
 
-<!--
- <link rel="stylesheet" href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css">
-<div class="container">
-	<div class="row">
-		<h3>Status Upload Snipp</h3>
-	</div>
-    
-    <div class="row">
-    
-    <div class="col-md-6">
-    <div class="widget-area no-padding blank">
-	<div class="status-upload">
-	<form>
-	<input type="text" id="authorname">
-	<textarea placeholder="What are you doing right now?" id="postbody"></textarea>
-				<ul>
-	
-										</ul>
-										<button type="submit" class="btn btn-success green" onclick="makepost()"><i class="fa fa-share"></i> Share</button>
-									</form>
-								</div>
-							</div>
-						</div>
-        
-    </div>
-</div> -->
+<script>
+        $("#btnSubmit").click(function(){
+                makepost();
+        });
+</script>
 
 </body>
-</html> 
+</html>
+
