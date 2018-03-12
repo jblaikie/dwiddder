@@ -11,6 +11,7 @@
                 newPost.find('#author').html(author);
                 newPost.find('#ts').html(ts);
                 newPost.find('#message').html(message);
+		log("new post");
                 return newPost;
         }
         function displayPosts(arrPosts){
@@ -20,6 +21,7 @@
                         var message = post['message'];
                         var ts = post['ts'];
                         var newPost = genPost(author, message, ts);
+			log("display posts");
                         $('#container').append(newPost);
                 }
         }
@@ -32,6 +34,7 @@
                         displayPosts(arrPosts);
                 });
 		alert($_POST);
+		log("retrieve posts");
         }
 </script>
 

@@ -29,7 +29,7 @@
 					alert("ERROR!");
 				}
 			    }*/);
-				
+				<?php error_log("on to postlist"); ?>
 				window.location = "/postlist.php";
 				//alert(post);
 		}

@@ -1,7 +1,7 @@
 <?php
 	include_once("db.php");
 
-	}
+	
 	function insertPost($author, $post){
 		$author = secure($author);
 		$post = secure($post);
@@ -22,7 +22,10 @@
 
 	function getPosts()
 	{
-
+		$query = "SELECT * FROM tbl_posts";
+                $arr = executeSQL($query);
+                error_log("getPosts function in common.php! ");
+                return count($arr) > 0;
 
 	/*	$.post("servlets/getPost.php",
 		{
@@ -33,5 +36,5 @@
 			displayPosts($arrPosts);
 		}); */
 	}
-}
+
 ?>
