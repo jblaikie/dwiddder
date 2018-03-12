@@ -1,7 +1,6 @@
 <?php
 	include_once("db.php");
 
-	}
 	function insertPost($author, $post){
 		$author = secure($author);
 		$post = secure($post);
@@ -22,19 +21,20 @@
 
 	function getPosts()
 	{
-	        $query = "SELECT * FROM tbl_posts;"
+	        $query = "SELECT * FROM tbl_posts";
 		$arr = executeSQL($query);
-		error_log("getPosts function in common.php! " $arr);
-		return count($arr) > 0;
-
-	/*	$.post("servlets/getPost.php",
+		error_log("getPosts function in common.php!");		
+                return count($arr) > 0;
+/*
+		$.post("servlets/getPost.php",
 		{
 			op: "getPost"
 		},
 		function ($data){
 			$arrPosts = JSON.parse($data);
 			displayPosts($arrPosts);
-		}); */
+		}); 
+*/
 	}
-}
+
 ?>
